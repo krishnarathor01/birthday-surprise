@@ -1,0 +1,302 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Birthday Surprise 💜</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="stars"></div>
+
+  <!-- MUSIC -->
+  <button id="musicButton" class="music-button">🎵 Play Music</button>
+
+  <audio id="birthdayMusic" loop>
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- PIN SCREEN -->
+  <section id="pinSection" class="screen active">
+    <div class="main-card">
+      <div class="big-emoji">🔐</div>
+      <p class="eyebrow">A LITTLE SECRET IS WAITING</p>
+      <h1>Something special<br>is waiting for you!</h1>
+      <p class="description">But first, prove that you know your special date. ♡</p>
+
+      <input id="pinInput" type="password" maxlength="4"
+        placeholder="Enter DDMM" inputmode="numeric">
+
+      <button id="unlockBtn">Unlock My Surprise ✨</button>
+
+      <p id="pinError" class="message"></p>
+      <p class="tiny-note">Hint: Your birthday date and month 💜</p>
+    </div>
+  </section>
+
+  <!-- BIRTHDAY SCREEN -->
+  <section id="birthdaySection" class="screen">
+    <div class="main-card birthday-card">
+      <div class="big-emoji">🎉🎂🎈</div>
+      <p class="eyebrow">TODAY IS ALL ABOUT YOU</p>
+
+      <h1 class="birthday-title">
+        Happy Birthday<br>
+        <span id="friendName">Dear Friend</span>! 💜
+      </h1>
+
+      <p class="description">
+        A little surprise, made with lots of love and memories.
+      </p>
+
+      <div class="question-box">
+        <h2>Are you excited for what's next? ✨</h2>
+
+        <div class="button-row">
+          <button id="yesBtn">YES! 💜</button>
+          <button id="noBtn" class="secondary-button">NO 🙈</button>
+        </div>
+
+        <p id="choiceMessage" class="message"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAKE A WISH -->
+  <section id="makeWishSection" class="screen">
+    <div class="main-card wish-card">
+      <div class="big-emoji">⭐💜</div>
+      <p class="eyebrow">A LITTLE MOMENT OF MAGIC</p>
+      <h1>Make a wish! ✨</h1>
+
+      <p class="description">
+        Before the candles and celebrations, think of one beautiful
+        thing you'd love to happen this year.
+      </p>
+
+      <div class="wish-candle">🌠</div>
+      <button id="makeWishBtn">Make a Wish 💫</button>
+    </div>
+  </section>
+
+  <!-- CLOSE YOUR EYES -->
+  <section id="wishSection" class="screen">
+    <div class="main-card wish-card">
+      <div class="big-emoji">🌙✨</div>
+      <p class="eyebrow">THIS MOMENT IS JUST FOR YOU</p>
+      <h1>Close your eyes...</h1>
+
+      <p class="description">
+        Take a deep breath, imagine your wish coming true,
+        and make it from your heart. 💜
+      </p>
+
+      <div class="wish-candle">🕯️</div>
+      <button id="wishBtn">I have made my wish ✨</button>
+    </div>
+  </section>
+
+  <!-- CANDLE -->
+  <section id="candleSection" class="screen">
+    <div class="main-card">
+      <div class="big-emoji">🕯️</div>
+      <p class="eyebrow">MAKE THIS WISH COME TRUE</p>
+      <h1>Now blow the candle!</h1>
+
+      <p class="description">
+        One little wish, a thousand possibilities. ♡
+      </p>
+
+      <div id="candleFlame" class="candle-flame">🔥</div>
+      <div class="candle-body">🕯️</div>
+
+      <button id="blowBtn">Blow the Candle ✨</button>
+      <p id="candleMessage" class="message"></p>
+    </div>
+  </section>
+
+  <!-- CAKE -->
+  <section id="cakeSection" class="screen">
+    <div class="main-card cake-card">
+      <p class="eyebrow">THE CELEBRATION CONTINUES</p>
+      <h1>Let's cut the cake! 🎂</h1>
+
+      <p class="description">
+        A little cake-cutting magic, just for you. ✨
+      </p>
+
+      <div class="cake-stage">
+        <div id="bigCake" class="big-cake" aria-label="Birthday cake">
+
+          <div class="cake-half cake-half-left">
+            <div class="cake-icing"></div>
+            <div class="cake-sprinkles">🍓 ✨ 🍒</div>
+          </div>
+
+          <div class="cake-half cake-half-right">
+            <div class="cake-icing"></div>
+            <div class="cake-sprinkles">💜 🍓 ✨</div>
+          </div>
+
+          <div class="cake-candle">🕯️</div>
+          <div class="cake-knife">🔪</div>
+
+        </div>
+      </div>
+
+      <button id="cutCakeBtn">Cut the Cake 🍰</button>
+      <p id="cakeMessage" class="message">
+        Ready? Let's cut the cake together! 🎀
+      </p>
+    </div>
+  </section>
+
+  <!-- GIFTS -->
+  <section id="giftSection" class="screen">
+    <div class="main-card gift-card">
+      <p class="eyebrow">A LITTLE GIFT FOR YOU</p>
+      <h1>Here is your gift! 🎁</h1>
+
+      <p class="description">
+        Choose a little character to unlock a memory. ♡
+      </p>
+
+      <div class="gift-grid">
+        <button class="gift-character" data-photo="0">
+          <span>🐻</span><small>Gift 01</small>
+        </button>
+
+        <button class="gift-character" data-photo="1">
+          <span>🐰</span><small>Gift 02</small>
+        </button>
+
+        <button class="gift-character" data-photo="2">
+          <span>🐼</span><small>Gift 03</small>
+        </button>
+
+        <button class="gift-character" data-photo="3">
+          <span>🐱</span><small>Gift 04</small>
+        </button>
+
+        <button class="gift-character" data-photo="4">
+          <span>🐸</span><small>Gift 05</small>
+        </button>
+      </div>
+
+      <p class="tiny-note">
+        There are memories hidden in every gift. 💜
+      </p>
+
+      <button id="letterBtn" class="wide-button">
+        One Last Surprise ✨
+      </button>
+    </div>
+  </section>
+
+  <!-- PHOTO SLIDESHOW POPUP -->
+  <div id="photoPopup" class="photo-popup">
+    <div class="photo-popup-card">
+
+      <button id="closePhotoBtn" class="close-button">✕</button>
+
+      <p class="eyebrow">A MEMORY FOR YOU</p>
+
+      <div class="photo-viewer">
+        <button id="prevPhotoBtn" class="photo-nav"
+          aria-label="Previous photo">&#10094;</button>
+
+        <img id="giftPhoto" src="" alt="Birthday memory">
+
+        <button id="nextPhotoBtn" class="photo-nav"
+          aria-label="Next photo">&#10095;</button>
+      </div>
+
+      <h2 id="photoCaption"></h2>
+      <p id="photoCounter" class="photo-counter"></p>
+
+      <p class="tiny-note">
+        Some moments deserve to stay forever. ♡
+      </p>
+
+    </div>
+  </div>
+
+  <!-- LETTER -->
+  <section id="letterSection" class="screen">
+    <div class="main-card letter-card">
+
+      <p class="eyebrow">A LITTLE SOMETHING FROM THE HEART</p>
+      <h1>A letter for you 💜</h1>
+
+      <p class="description letter-intro">
+        Some words are too special for an ordinary message...
+      </p>
+
+      <div id="envelope" class="envelope"
+        role="button" tabindex="0" aria-label="Open your letter">
+
+        <div class="envelope-back"></div>
+
+        <div class="envelope-paper">
+          <div class="paper-top">A LITTLE NOTE</div>
+          <div class="paper-heart">💌</div>
+          <div class="paper-lines">
+            <i></i><i></i><i></i>
+          </div>
+        </div>
+
+        <div class="envelope-front"></div>
+        <div class="envelope-flap"></div>
+        <div class="envelope-seal">♥</div>
+      </div>
+
+      <p id="envelopeText" class="description envelope-hint">
+        Tap the little envelope to open your letter. ♡
+      </p>
+
+      <div id="letterInside" class="letter-inside">
+        <div class="letter-sparkle">✦　♡　✦</div>
+        <div class="letter-decoration">💌</div>
+
+        <p class="letter-small-title">DEAR BIRTHDAY STAR</p>
+        <h2>A little message for you</h2>
+
+        <div class="letter-divider">♡ ✧ ♡</div>
+
+        <div id="birthdayMessage" class="birthday-message"></div>
+
+        <p class="letter-signoff">With lots of love, always ♡</p>
+
+        <button id="finalBtn">Open Your Final Surprise ✨</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FINAL SURPRISE -->
+  <section id="finalSection" class="screen">
+    <div class="main-card final-card">
+      <div class="big-emoji">🌌💜✨</div>
+
+      <p class="eyebrow">AND THAT'S NOT ALL...</p>
+      <h1>Keep shining!</h1>
+
+      <p class="description">
+        May your days be filled with laughter, beautiful memories
+        and endless happiness. Never stop being you! ♡
+      </p>
+
+      <div class="final-hearts">💜 💗 💜</div>
+
+      <h2>Happy Birthday Once Again! 🎂</h2>
+
+      <button id="replayBtn">Replay the Surprise ↻</button>
+    </div>
+  </section>
+
+  <script src="script.js" defer></script>
+
+</body>
+</html>
